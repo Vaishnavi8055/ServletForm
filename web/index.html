@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet Form</title>
+</head>
+
+<style>
+
+    body{
+        background-color: bisque;
+    }
+
+    button{
+        background-color: blue;
+        color: aliceblue;
+        padding: 11px 30px;
+        border-radius: 10%;
+        font-style: oblique;
+        font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    .container{
+        width: 40%;
+        border: 5px solid black;
+        margin: auto;
+        padding: 20px;
+        background-color: aliceblue;
+        font-size: 18px;
+    }
+
+    #myform table tr td input{
+        font-size: 20px;
+    }
+
+</style>
+
+<body>
+
+<div class = "container">
+    <h1 style="text-align: center; font-style: italic">Welcome</h1>
+
+    <!--     post method is more secure than get method-->
+    <form id="myform" action="RegisterServlet" method="post">
+        <table>
+            <tr>
+
+                <td>Enter Your Full name</td>
+                <td> <input type="text" name="user_name" placeholder="Enter Your Name"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Your Email-ID</td>
+                <td> <input type="text" name="user_email" placeholder="Enter Your Email-ID"></td>
+            </tr>
+
+
+            <tr>
+                <td>Enter Your Password</td>
+                <td> <input type="text" name="user_pass" placeholder="Enter Your Password"></td>
+            </tr>
+
+            <tr>
+                <td>Re-Enter Your Password</td>
+                <td> <input type="text" name="user_pass" placeholder="Enter Your Password"></td>
+            </tr>
+
+            <tr>
+                <td>Select Gender</td>
+                <td> <input type="radio" name="user_gender" value="male" placeholder="Enter Your Gender">Male &nbsp; &nbsp;  <input type="radio" name="user_gender" value="female" placeholder="Enter Your Gender">Female</td>
+            </tr>
+
+            <tr>
+                <td>Select Course</td>
+                <td>
+                    <select name="user_course">
+                        <option value="java">JAVA</option>
+                        <option value="android">Android Development</option>
+                        <option value="web">Web Development</option>
+                        <option value="ml">Machine Learning</option>
+                        <option value="iot">IOT</option>
+
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right"> <input type="checkbox" name="terms" value="checked"> </td>
+                <td> <h3>  Please Agree to the Terms and Conditions </h3> </td>
+
+            </tr>
+            <tr>
+
+                <td>
+
+                </td>
+
+                <td>
+                    <button type="submit" class="button">SUBMIT</button>
+                    <button type="reset" class="button">RESET</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
+
+</body>
+</html>
